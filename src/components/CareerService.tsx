@@ -1,24 +1,47 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, ArrowRight, Users, Target, Briefcase, Globe, Clock, MessageCircle } from "lucide-react";
+import {
+  CheckCircle,
+  ArrowRight,
+  Users,
+  Target,
+  Briefcase,
+  Globe,
+  Clock,
+  MessageCircle,
+  Power,
+  Construction,
+  ArrowUpRightFromCircle,
+} from "lucide-react";
 import careerCoachPortrait from "@/assets/career-coach-portrait.jpg";
 import processSteps from "@/assets/process-steps.jpg";
 import featuresShowcase from "@/assets/features-showcase.jpg";
+import heroImage from "@/assets/hero-image.jpg";
+import feature1 from "@/assets/feature-5.jpg"
+import feature2 from "@/assets/feature-4.jpg"
+import feature3 from "@/assets/feature-3.jpg"
+import feature4 from "@/assets/feature-2.jpg"
+import feature5 from "@/assets/feature-1.jpg"
+import testimonial1 from "@/assets/testimontial-1.jpg"
+import testimonial2 from "@/assets/testimontial-2.jpg"
+import testimonial3 from "@/assets/testimontial-3.jpg"
+import testimonial4 from "@/assets/testimontial-4.jpg"
+import testimonial5 from "@/assets/testimontial-5.jpg"
 
 const CareerService = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="">
         <div className="absolute inset-0 gradient-primary opacity-10"></div>
-        <div className="container mx-auto px-6 py-20">
+        <div className="container flex items-center justify-center px-6 py-20">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="relative">
               <div className="w-64 h-64 rounded-full overflow-hidden shadow-primary ring-4 ring-primary/20">
-                <img 
-                  src={careerCoachPortrait} 
-                  alt="Career Coach" 
+                <img
+                  src={careerCoachPortrait}
+                  alt="Career Coach"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -26,81 +49,53 @@ const CareerService = () => {
                 <CheckCircle className="w-6 h-6 text-primary-foreground" />
               </div>
             </div>
-            
-            <div className="flex-1 text-center lg:text-left">
-              <Badge className="mb-4 gradient-secondary text-white border-0">
-                Professional Career Coaching
-              </Badge>
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Transform Your Career Journey
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-                Expert guidance to land your dream job abroad. From CV crafting to interview preparation, 
-                we provide comprehensive career coaching tailored to your unique goals.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Globe className="w-5 h-5 text-primary" />
-                  <span>International Opportunities</span>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Users className="w-5 h-5 text-accent" />
-                  <span>Personalized Coaching</span>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Target className="w-5 h-5 text-primary" />
-                  <span>Proven Results</span>
-                </div>
-              </div>
+            <p className="mb-4 text-black border-0">
+              <span className="text-3xl font-bold">Mariem Chammem</span> <br />
+              <span className="text-lg text-muted-foreground">Conseillere et expert en recherche d'emploi </span> <br />
+              <span className="text-lg text-muted-foreground">Oriventa Pro Service Vompany</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className=" flex flex-col items-center justify-center py-20 bg-muted/30">
+        <div className="text-center flex flex-col gap-6 items-center">
+          <img width={500} className="rounded-lg" src={heroImage} alt="" />
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
+            نوفرولك خدمة شاملة ، دقيقة ومحترفة مبنية على خبرة فريق مختص فالبحث
+            عن العمل بالخارج يعرف كل أسرار السوق العالمي ينصحك خطوة بخطوة مع
+            تقديم مرافقة شخصية وتوجيهات مهنية
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Globe className="w-5 h-5 text-primary" />
+              <span>خبرة فالبحث عن العمل بالخارج </span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Users className="w-5 h-5 text-accent" />
+              <span>مرافقة ومتابعة شخصية </span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Target className="w-5 h-5 text-primary" />
+              <span>نتيجة مضمونة</span>
             </div>
           </div>
         </div>
       </section>
-
       {/* Discovery Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Discover If Our Program Is Right For You</h2>
+            <h2 className="text-4xl font-bold mb-6">
+              إكتشف إذا كان هذا البرنامج هو فرصتك الوحيدة{" "}
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our service is available to anyone with experience in any field. The basic requirement 
-              is having proof of at least 6 months of work experience in your field.
+              نقدمولك على أي فرصة عمل في أي بلاد تختارها تناسب طموحاتك وتتماشى
+              مع كفاءتك شرط تتوفر فيك اللغة (Stages , Diplomes , Certificats ,
+              Attestations de Travail) بكل بساطة خدمتنا يستفيد منها أي شخص لديه
+              خبرة في أي مجال . الشرط الأساسي هو إمتلاك خبرة مهنية لا تقل عن 6
+              أشهر تثبت كفاءتك في مجال تخصصك
             </p>
           </div>
-          
-          <Card className="gradient-card shadow-card border-0 p-8 max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 text-primary">You Can Benefit If You Have:</h3>
-                <ul className="space-y-4">
-                  {[
-                    "At least 6 months of work experience",
-                    "Professional certificates or training courses",
-                    "Relevant diplomas or qualifications",
-                    "Language proficiency in your target country",
-                    "Genuine motivation to work abroad"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div className="gradient-secondary p-6 rounded-lg text-white">
-                <h3 className="text-xl font-semibold mb-4">Ready to Get Started?</h3>
-                <p className="text-white/90 mb-6">
-                  We help you find work in any country you desire, provided you have the language skills 
-                  and professional background required.
-                </p>
-                <Button variant="secondary" className="w-full">
-                  Check Your Eligibility
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </div>
-            </div>
-          </Card>
         </div>
       </section>
 
@@ -108,10 +103,13 @@ const CareerService = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Which Type Are You?</h2>
+            <h2 className="text-4xl font-bold mb-6">
+              شنوة الفرق بينك وبين غيرك ؟
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Every day, we receive messages from people who dream of working abroad. 
-              But the truth is, not everyone is ready. There are two types of people:
+              كل يوم نسمعو برشا يحلمو يخدمو في الخارج ... أما مش الكل ياخذ
+              الخطوة . ثمة نوعين من الناس : ناس تستنى الفرصة ... وناس تخلق
+              الفرصة
             </p>
           </div>
 
@@ -122,28 +120,26 @@ const CareerService = () => {
                 <div className="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-8 h-8 text-destructive" />
                 </div>
-                <h3 className="text-2xl font-bold text-destructive">The Dreamer</h3>
-                <p className="text-muted-foreground">Loves to dream but isn't ready to move</p>
+                <h3 className="text-2xl font-bold text-destructive">
+                  ناس تحب تحلم ... أما واقفة في بلاصتها
+                </h3>
               </div>
-              
+
               <ul className="space-y-3 mb-6">
                 {[
-                  "Still living in the local job market mindset",
-                  "Lacks confidence in their abilities",
-                  "Afraid of the unknown and change",
-                  "Doesn't understand the value of investing in their future",
-                  "Fear of working abroad kills their courage"
+                  "مازلت مربوطة بسوق العمل المحلي . تستنى في معجزة ، وهي عارفة انها قاعدة تضيع في وقتها ",
+                  'كل مرة طيح من قيمتها وتوطي سقف طموحاتها وتقول : "ما نجمش" ، "مستويا عادي " ، "لازم برشة فلوس .."',
+                  "الخوف من التغيير يكبلها ... والخوف من الغربة يخليها تتراجع قبل ما تبدأ ",
+                  "تعرش قيمة الإستثمار في مستقبلها وتتردد باش تستغل فرص باش حياتها . والنتيجة ؟ السنوات تعدي ، والحلم يبقى حلم وفرصة ورى فرصة تضيع ",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm text-muted-foreground">{item}</span>
+                    <span className="text-sm text-muted-foreground">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
-              
-              <p className="text-sm text-destructive font-medium text-center">
-                Result: Years pass by, opportunities disappear...
-              </p>
             </Card>
 
             {/* Type 2 - Action Takers */}
@@ -152,29 +148,32 @@ const CareerService = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary">The Action Taker</h3>
-                <p className="text-muted-foreground">Knows their worth and builds their life</p>
+                <h3 className="text-2xl font-bold text-primary">
+                  ناس تقدر قيمتها وتحب تبني مستقبلها{" "}
+                </h3>
               </div>
-              
+
               <ul className="space-y-3 mb-6">
                 {[
-                  "Has real experience in a specific field with certificates",
-                  "Seeks personal guidance step by step",
-                  "Masters French or English or is developing language skills",
-                  "Doesn't buy illusions or false promises",
-                  "Wants real experience with recruitment experts",
-                  "Understands that investing in their future is the cheapest decision"
+                  "عندها خبرة، شهادات، و مهارات حقيقية تراها بعين كبيرة و تستحق حياة ماأكبر",
+                  "تعرف إلي النجاح في الخارج يلزمو خطة واضحة مش وعود فارغة",
+                  "تحسن في لغتها، وتفهم إنو الاستثمار في روحها هو أثمن قرار",
+                  "ما تبعش أوهام، ما تشريش ورق مزوّرة، وما تضيعش فلوسها مع وسطاء",
+                  "تحب فرصة حقيقية مع خبراء، مرافقة شخصية خطوة بخطوة، من أول سيرة ذاتية محترفة، للتقديم الصحيح، للتحضير للمقابلة.",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">{item}</span>
+                    <span className="text-sm text-muted-foreground">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
-              
+
               <div className="gradient-primary p-4 rounded-lg text-center">
                 <p className="text-white font-medium">
-                  If you're the second type, welcome to our career service! 👋
+                  إذا كنت من النوع الثاني... مرحباً بيك مع Oriventa Pro Service
+                  Company 👌
                 </p>
               </div>
             </Card>
@@ -182,16 +181,20 @@ const CareerService = () => {
 
           <div className="text-center mt-12">
             <Card className="gradient-card shadow-accent border-0 p-8 max-w-3xl mx-auto">
-              <h3 className="text-2xl font-semibold mb-4">Ready to Take Action?</h3>
               <p className="text-muted-foreground mb-6">
-                We accompany you every step of the way professionally, from writing your CV 
-                to applying for jobs, to preparing for interviews.
+                معانا تلقى دعم حقيقي، نعاونوك بكل جدية، نرافقوك بالخبرة، ونخليو
+                مستقبلك يتبنى بالفعل... مش باللحظ. مانخليو حتى حاجة للصدفة، كل
+                خطوة مدروسة وكل خطة محسوبة وكل فرصة تصنع بيها مستقبلك في أي بلاد
+                تختارو، وكل نجاح نفتخرو بيه معاك.
               </p>
               <p className="text-lg font-semibold text-primary mb-6">
-                🎯 Your future isn't built on luck... it's built on decisions.
+                🎯 قرار اليوم هو اللي يغير حياتك غدوة.{" "}
               </p>
-              <Button size="lg" className="gradient-primary border-0 text-white shadow-primary">
-                Start Your Journey
+              <Button
+                size="lg"
+                className="gradient-primary border-0 text-white shadow-primary"
+              >
+                احصل على إستشارة مجانية
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Card>
@@ -203,14 +206,13 @@ const CareerService = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Steps to Join Our Program</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A simple, structured process to get you started on your international career journey
-            </p>
+            <h2 className="text-4xl font-bold mb-6">
+              خطواتك نحو المستقبل "ابدأ رحلتك معنا نحو النجاح"
+            </h2>
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-4 gap-8">
               {/* Step 1 */}
               <Card className="gradient-card shadow-card border-0 p-8 text-center relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -222,11 +224,14 @@ const CareerService = () => {
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Briefcase className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Submit Application</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    {" "}
+                    أرسل مستنداتك بكل سهولة
+                  </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Fill out our comprehensive form and provide all necessary documents. 
-                    After payment completion, we'll send you a detailed form via WhatsApp 
-                    to gather your work certificates and required papers.
+                    بعد إتمام الدفع في المكتب أو عبر حوالة بنكية، سنرسل لك على
+                    الواتساب نموذج سهل لتعبئته ورفع كل شهاداتك وأوراقك. بمجرد
+                    استلامنا لها، نبدأ مباشرة في تجهيز ملفك الشخصي للبحث عن عمل.
                   </p>
                 </div>
               </Card>
@@ -242,11 +247,13 @@ const CareerService = () => {
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <MessageCircle className="w-8 h-8 text-accent" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Verification & Follow-up</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    متابعة دقيقة وشخصية
+                  </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    After receiving your documents and information, we'll contact you by phone 
-                    to understand your complete needs and hear your full story to prepare 
-                    a job search plan perfectly tailored to your requirements.
+                    بعد استلام كل مستنداتك، سنتواصل معك هاتفياً لسماع كامل قصتك
+                    واحتياجاتك. بهذه الطريقة، نضع لك خطة بحث عن عمل مصممة خصيصاً
+                    لأهدافك، سواء كنت تريد العمل في فرنسا أو اصطحاب عائلتك معك.
                   </p>
                 </div>
               </Card>
@@ -262,20 +269,44 @@ const CareerService = () => {
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Target className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Official Launch</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    البداية الرسمية والمتابعة اليومية
+                  </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Get access to our platform to track your job search progress, download your CV, 
-                    access your professional email, and see daily updates on job applications 
-                    throughout the entire 3-month working period.
+                    سنرسل لك رابط تسجيل الدخول في منصتنا، من خلاله: تتابع تقدم
+                    ملفك لحظة بلحظة. تحمل سيرتك الذاتية الاحترافية. تستخدم
+                    البريد الإلكتروني الاحترافي الذي سنوفره لك. وتشاهد عدد
+                    التقديمات على الوظائف يوميًا خلال فترة عملنا (ثلاثة أشهر)
+                    لضمان أفضل النتائج.
+                  </p>
+                </div>
+              </Card>
+              <Card className="gradient-card shadow-card border-0 p-8 text-center relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="w-8 h-8 bg-accent rounded-full text-white flex items-center justify-center font-bold">
+                    4
+                  </div>
+                </div>
+                <div className="mb-6 pt-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <ArrowUpRightFromCircle className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">
+                    استمرارية الدعم والتقييم
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    خلال مدة البرنامج، سنكون معك في كل خطوة: نصائح، مراجعة،
+                    تحفيز، ودعم شخصي لضمان أن تحقق أقصى استفادة وتصل لهدفك بأفضل
+                    طريقة ممكنة.
                   </p>
                 </div>
               </Card>
             </div>
 
             <div className="mt-12">
-              <img 
-                src={processSteps} 
-                alt="Process workflow" 
+              <img
+                src={processSteps}
+                alt="Process workflow"
                 className="w-full max-w-4xl mx-auto rounded-lg shadow-card"
               />
             </div>
@@ -287,49 +318,43 @@ const CareerService = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Features Included in Your Package</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Everything you need to succeed in your international job search
-            </p>
+            <h2 className="text-4xl font-bold mb-6">
+              ملفك الشخصي  : كل المزايا إلي تستحقها ، إكتشف كل المزايا التي يحتويها ملفك 
+            </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-full mx-auto mb-12">
             {[
               {
-                icon: <Briefcase className="w-6 h-6" />,
-                title: "Professional CV",
-                description: "Expertly crafted resume tailored to international standards"
+                image: feature1,
               },
               {
-                icon: <Globe className="w-6 h-6" />,
-                title: "Professional Email",
-                description: "Dedicated business email address for applications"
+                image: feature2,
+              
               },
               {
-                icon: <Target className="w-6 h-6" />,
-                title: "Job Applications",
-                description: "Daily job applications on your behalf for 3 months"
+                image: feature3,
               },
               {
-                icon: <Users className="w-6 h-6" />,
-                title: "Progress Tracking",
-                description: "Real-time dashboard to monitor your application status"
-              }
+                image: feature4,
+              },
+              {
+                image: feature5,
+              },
             ].map((feature, index) => (
-              <Card key={index} className="gradient-card shadow-card border-0 p-6 text-center transition-smooth hover:shadow-accent hover:-translate-y-1">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
-                  {feature.icon}
-                </div>
-                <h3 className="font-semibold mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+              <Card
+                key={index}
+                className="gradient-card shadow-card border-0 p-6 text-center transition-smooth hover:shadow-accent hover:-translate-y-1"
+              >
+              <img  className="rounded-lg w-full h-full object-cover" src={feature.image} alt="" />
               </Card>
             ))}
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <img 
-              src={featuresShowcase} 
-              alt="Features showcase" 
+            <img
+              src={featuresShowcase}
+              alt="Features showcase"
               className="w-full rounded-lg shadow-accent"
             />
           </div>
@@ -340,69 +365,45 @@ const CareerService = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">We Share Real Results With You</h2>
+            <h2 className="text-4xl font-bold mb-6">
+              نشاركو معاكم نتائج حقيقية 
+            </h2>
             <div className="flex justify-center mb-6">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-2xl text-yellow-400">⭐</span>
+                <span key={i} className="text-2xl text-yellow-400">
+                  ⭐
+                </span>
               ))}
             </div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Don't just take our word for it. See the success stories of our clients 
-              who landed their dream jobs abroad.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
-                name: "Sarah M.",
-                role: "Software Engineer",
-                country: "Germany",
-                testimonial: "Got my dream job in Berlin within 2 months! The process was smooth and professional."
+                image : testimonial1
               },
               {
-                name: "Ahmed K.",
-                role: "Marketing Manager",
-                country: "Canada", 
-                testimonial: "Excellent service! They helped me navigate the Canadian job market successfully."
+              image : testimonial2
               },
               {
-                name: "Fatima L.",
-                role: "Nurse",
-                country: "France",
-                testimonial: "Professional coaching that actually works. Now working in Paris as I always dreamed!"
+              image : testimonial3
               },
               {
-                name: "Omar B.",
-                role: "Data Analyst",
-                country: "UAE",
-                testimonial: "The team's expertise in international recruitment is unmatched. Highly recommended!"
+                image : testimonial4
               },
               {
-                name: "Leila R.",
-                role: "Teacher",
-                country: "Belgium",
-                testimonial: "From CV writing to interview prep, they covered everything. Got multiple offers!"
+                image : testimonial5
               },
-              {
-                name: "Youssef H.",
-                role: "Engineer",
-                country: "Netherlands",
-                testimonial: "Professional service that delivers results. Working in Amsterdam now thanks to them!"
-              }
             ].map((testimonial, index) => (
-              <Card key={index} className="gradient-card shadow-card border-0 p-6">
+              <Card
+                key={index}
+                className="gradient-card shadow-card border-0 p-6"
+              >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Users className="w-6 h-6 text-primary" />
-                  </div>
                   <div>
-                    <h4 className="font-semibold">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    <Badge variant="secondary" className="text-xs">{testimonial.country}</Badge>
+                    <img className="rounded-lg w-full h-full object-cover" src={testimonial.image} alt="" />
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground italic">"{testimonial.testimonial}"</p>
               </Card>
             ))}
           </div>
@@ -413,23 +414,15 @@ const CareerService = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <Card className="gradient-primary border-0 p-12 text-center text-white shadow-accent max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Career?</h2>
-            <p className="text-xl mb-8 text-white/90">
-              Get your free consultation today and take the first step towards your international career
-            </p>
+            <h2 className="text-4xl font-bold mb-6">
+              إبدأ اليوم بإستشارتك المجانية وأخطو أول خطوة نحو مستقبل مهني عالمي   
+            </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="text-lg px-8">
-                Get Free Consultation
+                إستشارة مجانية
                 <MessageCircle className="w-5 h-5 ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 border-white text-white hover:bg-white hover:text-primary">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
             </div>
-            <p className="text-sm text-white/70 mt-6">
-              🎯 Your future starts with a single decision. Make it today.
-            </p>
           </Card>
         </div>
       </section>
