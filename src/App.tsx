@@ -10,6 +10,13 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
+    <div className="marquee">
+  <div className="track">
+    <div className="content">
+      &nbsp;نوفرولك خدمة شاملة ، دقيقة ومحترفة مبنية على خبرة فريق مختص فالبحث عن العمل بالخارج يعرف كل أسرار السوق العالمي ينصحك خطوة بخطوة مع تقديم مرافقة شخصية وتوجيهات مهنية
+      </div>
+  </div>
+</div>
     <TooltipProvider>
       <Toaster />
       <Sonner />

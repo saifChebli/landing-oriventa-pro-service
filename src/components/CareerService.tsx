@@ -66,7 +66,7 @@ const scrollToSection = (sectionId: string) => {
             <p className="mb-4 text-left  text-black border-0">
               <span className="text-md md:text-4xl font-extrabold text-primary mb-0 md:mb-4">
                 Mariem Chammem
-                <div className="absolute hidden md:block top-[6%] right-[30%] md:top-[30%] md:right-[44%] bg-primary rounded-full p-0.5 md:p-1 shadow-accent">
+                <div className="absolute hidden top-[6%] right-[30%] md:top-[30%] md:right-[44%] bg-primary rounded-full p-0.5 md:p-1 shadow-accent">
                   <CheckCircle className="w-4 h-4 md:w-6 md:h-6 text-primary-foreground" />
                 </div>
               </span>

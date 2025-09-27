@@ -218,3 +218,34 @@ body {
   /* background-color: #ffffff !important; */
   color: #AD41F4;
 }
+
+
+.marquee {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 50px;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, hsl(220 91% 60%), hsl(280 89% 65%));
+  font-family: "Kufam", sans-serif;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 12s linear infinite;
+}
+
+.content {
+  display: inline-block;
+  padding-left: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
