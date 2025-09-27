@@ -8,7 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+       --font-kufam: "Kufam", sans-serif;
+
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -29,7 +30,7 @@ All colors MUST be HSL.
 
     --accent: 280 89% 60%;
     --accent-foreground: 0 0% 100%;
-
+    --accent-gradient: linear-gradient(135deg, hsl(220 91% 55%), hsl(280 89% 60%));;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
@@ -68,6 +69,8 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+
   }
 
   .dark {
@@ -121,6 +124,9 @@ All colors MUST be HSL.
 body {
   direction: rtl; 
 }
+@theme{
+   --font-kufam: "Kufam", sans-serif;
+}
 @layer base {
   * {
     @apply border-border;
@@ -162,4 +168,15 @@ body {
   .transition-bounce {
     transition: var(--transition-bounce);
   }
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }

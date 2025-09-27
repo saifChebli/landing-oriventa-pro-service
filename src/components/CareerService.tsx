@@ -29,36 +29,47 @@ import testimonial3 from "@/assets/testimontial-3.jpg"
 import testimonial4 from "@/assets/testimontial-4.jpg"
 import testimonial5 from "@/assets/testimontial-5.jpg"
 
+import {Swiper , SwiperSlide } from 'swiper/react'
+import 'swiper/css'
 const CareerService = () => {
+
+
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="">
-        <div className="absolute inset-0 gradient-primary opacity-10"></div>
-        <div className="container flex items-center justify-center px-6 py-20">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+      <section className="" style={{backgroundImage : "url('hero-bg-scaled-1.jpg"}}>
+        {/* <div className="absolute inset-0 gradient-primary opacity-10"></div> */}
+        <div className="container flex items-center justify-center px-6 py-8 md:py-20">
+          <div className="flex flex-row-reverse lg:flex-row-reverse items-center gap-4 md:gap-12">
             <div className="relative">
-              <div className="w-64 h-64 rounded-full overflow-hidden shadow-primary ring-4 ring-primary/20">
+              <div className="w-24 h-24 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-primary ring-4 ring-accent">
                 <img
                   src={careerCoachPortrait}
                   alt="Career Coach"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-primary rounded-full p-3 shadow-accent">
-                <CheckCircle className="w-6 h-6 text-primary-foreground" />
-              </div>
+           
             </div>
-            <p className="mb-4 text-black border-0">
-              <span className="text-3xl font-bold">Mariem Chammem</span> <br />
-              <span className="text-lg text-muted-foreground">Conseillere et expert en recherche d'emploi </span> <br />
-              <span className="text-lg text-muted-foreground">Oriventa Pro Service Vompany</span>
+            <p className="mb-4 text-left  text-black border-0">
+              <span className="text-md md:text-4xl font-extrabold text-primary mb-0 md:mb-4">
+                Mariem Chammem
+                  <div className="absolute hidden md:block top:-50 right-16 md:top-40 md:right-[22%] bg-primary rounded-full p-1 md:p-3 shadow-accent">
+                <CheckCircle className="w-4 h-4 md:w-6 md:h-6 text-primary-foreground" />
+              </div>
+                </span>
+                 <br /> 
+               
+              <span className="text-[13px] md:text-3xl  font-extrabold bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text ">Conseillere et expert en recherche d'emploi </span> 
+              <span className="text-[13px] md:text-3xl font-extrabold bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">Oriventa Pro Service Vompany</span>
             </p>
           </div>
         </div>
       </section>
-      <section className=" flex flex-col items-center justify-center py-20 bg-muted/30">
-        <div className="text-center flex flex-col gap-6 items-center">
+
+      <section className="flex font-kufam flex-col items-center justify-center py-0 md:py-20 bg-muted/30">
+        <div className="text-center flex flex-col gap-6 items-center px-6 ">
           <img width={500} className="rounded-lg" src={heroImage} alt="" />
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
             نوفرولك خدمة شاملة ، دقيقة ومحترفة مبنية على خبرة فريق مختص فالبحث
@@ -82,13 +93,13 @@ const CareerService = () => {
         </div>
       </section>
       {/* Discovery Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-xl md:text-4xl mb-12  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
               إكتشف إذا كان هذا البرنامج هو فرصتك الوحيدة{" "}
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-md md:text-xl text-muted-foreground max-w-3xl mx-auto">
               نقدمولك على أي فرصة عمل في أي بلاد تختارها تناسب طموحاتك وتتماشى
               مع كفاءتك شرط تتوفر فيك اللغة (Stages , Diplomes , Certificats ,
               Attestations de Travail) بكل بساطة خدمتنا يستفيد منها أي شخص لديه
@@ -100,13 +111,13 @@ const CareerService = () => {
       </section>
 
       {/* Audience Types Section */}
-      <section className="py-20">
+      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="font-bold text-xl md:text-4xl mb-12  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
               شنوة الفرق بينك وبين غيرك ؟
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-md md:text-xl text-muted-foreground max-w-3xl mx-auto">
               كل يوم نسمعو برشا يحلمو يخدمو في الخارج ... أما مش الكل ياخذ
               الخطوة . ثمة نوعين من الناس : ناس تستنى الفرصة ... وناس تخلق
               الفرصة
@@ -203,10 +214,10 @@ const CareerService = () => {
       </section>
 
       {/* Process Steps Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="font-bold text-xl md:text-4xl mb-12  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
               خطواتك نحو المستقبل "ابدأ رحلتك معنا نحو النجاح"
             </h2>
           </div>
@@ -302,23 +313,15 @@ const CareerService = () => {
                 </div>
               </Card>
             </div>
-
-            <div className="mt-12">
-              <img
-                src={processSteps}
-                alt="Process workflow"
-                className="w-full max-w-4xl mx-auto rounded-lg shadow-card"
-              />
-            </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="font-bold text-xl md:text-4xl mb-12  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
               ملفك الشخصي  : كل المزايا إلي تستحقها ، إكتشف كل المزايا التي يحتويها ملفك 
             </h2>
           </div>
@@ -344,28 +347,20 @@ const CareerService = () => {
             ].map((feature, index) => (
               <Card
                 key={index}
-                className="gradient-card shadow-card border-0 p-6 text-center transition-smooth hover:shadow-accent hover:-translate-y-1"
+                className="gradient-card shadow-card border-0 text-center transition-smooth hover:shadow-accent hover:-translate-y-1"
               >
               <img  className="rounded-lg w-full h-full object-cover" src={feature.image} alt="" />
               </Card>
             ))}
           </div>
-
-          <div className="max-w-4xl mx-auto">
-            <img
-              src={featuresShowcase}
-              alt="Features showcase"
-              className="w-full rounded-lg shadow-accent"
-            />
-          </div>
         </div>
       </section>
 
       {/* Results Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
+      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
+        <div className="container px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="font-bold text-xl md:text-4xl mb-12  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
               نشاركو معاكم نتائج حقيقية 
             </h2>
             <div className="flex justify-center mb-6">
@@ -377,44 +372,48 @@ const CareerService = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              {
-                image : testimonial1
-              },
-              {
-              image : testimonial2
-              },
-              {
-              image : testimonial3
-              },
-              {
-                image : testimonial4
-              },
-              {
-                image : testimonial5
-              },
-            ].map((testimonial, index) => (
-              <Card
-                key={index}
-                className="gradient-card shadow-card border-0 p-6"
+              <Swiper
+                spaceBetween={50}
+                slidesPerView={1}
+                pagination={{clickable : true}}
+                autoplay
+                loop              
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div>
-                    <img className="rounded-lg w-full h-full object-cover" src={testimonial.image} alt="" />
+                <SwiperSlide>
+                  <div className="w-[600px]">
+                    <img className="w-full h-full rounded-lg object-cover" src={testimonial1} alt="" />
                   </div>
-                </div>
-              </Card>
-            ))}
-          </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                   <div>
+                    <img className="rounded-lg w-full h-full object-cover" src={testimonial2} alt="" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                      <div>
+                    <img className="rounded-lg w-full h-full object-cover" src={testimonial3} alt="" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div>
+                    <img className="rounded-lg w-full h-full object-cover" src={testimonial4} alt="" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                      <div>
+                    <img className="rounded-lg w-full h-full object-cover" src={testimonial5} alt="" />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+
         </div>
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20">
+      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
         <div className="container mx-auto px-6">
           <Card className="gradient-primary border-0 p-12 text-center text-white shadow-accent max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-2xl font-bold mb-6">
               إبدأ اليوم بإستشارتك المجانية وأخطو أول خطوة نحو مستقبل مهني عالمي   
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
