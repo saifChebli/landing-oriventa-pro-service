@@ -15,30 +15,42 @@ import {
   ArrowUpRightFromCircle,
 } from "lucide-react";
 import careerCoachPortrait from "@/assets/career-coach-portrait.jpg";
-import processSteps from "@/assets/process-steps.jpg";
-import featuresShowcase from "@/assets/features-showcase.jpg";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import heroImage from "@/assets/hero-image.jpg";
-import feature1 from "@/assets/feature-5.jpg"
-import feature2 from "@/assets/feature-4.jpg"
-import feature3 from "@/assets/feature-3.jpg"
-import feature4 from "@/assets/feature-2.jpg"
-import feature5 from "@/assets/feature-1.jpg"
-import testimonial1 from "@/assets/testimontial-1.jpg"
-import testimonial2 from "@/assets/testimontial-2.jpg"
-import testimonial3 from "@/assets/testimontial-3.jpg"
-import testimonial4 from "@/assets/testimontial-4.jpg"
-import testimonial5 from "@/assets/testimontial-5.jpg"
+import feature1 from "@/assets/feature-5.jpg";
+import feature2 from "@/assets/feature-4.jpg";
+import feature3 from "@/assets/feature-3.jpg";
+import feature4 from "@/assets/feature-2.jpg";
+import feature5 from "@/assets/feature-1.jpg";
+import testimonial1 from "@/assets/testimontial-1.jpg";
+import testimonial2 from "@/assets/testimontial-2.jpg";
+import testimonial3 from "@/assets/testimontial-3.jpg";
+import testimonial4 from "@/assets/testimontial-4.jpg";
+import testimonial5 from "@/assets/testimontial-5.jpg";
 
-import {Swiper , SwiperSlide } from 'swiper/react'
-import 'swiper/css'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 const CareerService = () => {
+
+
+const scrollToSection = (sectionId: string) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="" style={{backgroundImage : "url('hero-bg-scaled-1.jpg"}}>
+      <section
+        className=""
+        style={{ backgroundImage: "url('hero-bg-scaled-1.jpg" }}
+      >
         {/* <div className="absolute inset-0 gradient-primary opacity-10"></div> */}
         <div className="container flex items-center justify-center px-6 py-8 md:py-20">
           <div className="flex flex-row-reverse lg:flex-row-reverse items-center gap-4 md:gap-12">
@@ -50,19 +62,22 @@ const CareerService = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-           
             </div>
             <p className="mb-4 text-left  text-black border-0">
               <span className="text-md md:text-4xl font-extrabold text-primary mb-0 md:mb-4">
                 Mariem Chammem
-                  <div className="absolute hidden md:block top:-50 right-16 md:top-40 md:right-[22%] bg-primary rounded-full p-1 md:p-3 shadow-accent">
-                <CheckCircle className="w-4 h-4 md:w-6 md:h-6 text-primary-foreground" />
-              </div>
-                </span>
-                 <br /> 
-               
-              <span className="text-[13px] md:text-3xl  font-extrabold bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text ">Conseillere et expert en recherche d'emploi </span> 
-              <span className="text-[13px] md:text-3xl font-extrabold bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">Oriventa Pro Service Vompany</span>
+                <div className="absolute hidden md:block top-[6%] right-[30%] md:top-[30%] md:right-[44%] bg-primary rounded-full p-0.5 md:p-1 shadow-accent">
+                  <CheckCircle className="w-4 h-4 md:w-6 md:h-6 text-primary-foreground" />
+                </div>
+              </span>
+              <br />
+
+              <span className="text-[13px] md:text-3xl  font-extrabold bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text ">
+                Conseillere et expert en recherche d'emploi{" "}
+              </span>
+              <span className="text-[13px] md:text-3xl font-extrabold bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
+                Oriventa Pro Service Company
+              </span>
             </p>
           </div>
         </div>
@@ -93,10 +108,10 @@ const CareerService = () => {
         </div>
       </section>
       {/* Discovery Section */}
-      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
+      <section className="pt-10 md:py-20 bg-muted/30 font-kufam">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-xl md:text-4xl mb-12  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
+            <h2 className="text-xl font-bold md:text-4xl mb-12  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
               إكتشف إذا كان هذا البرنامج هو فرصتك الوحيدة{" "}
             </h2>
             <p className="text-md md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -111,7 +126,7 @@ const CareerService = () => {
       </section>
 
       {/* Audience Types Section */}
-      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
+      <section className="pb-10 md:py-20 bg-muted/30 font-kufam">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-bold text-xl md:text-4xl mb-12  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
@@ -201,23 +216,25 @@ const CareerService = () => {
               <p className="text-lg font-semibold text-primary mb-6">
                 🎯 قرار اليوم هو اللي يغير حياتك غدوة.{" "}
               </p>
-              <Button
+                  <Button
                 size="lg"
                 className="gradient-primary border-0 text-white shadow-primary"
+                onClick={() => scrollToSection("contact")}
               >
                 احصل على إستشارة مجانية
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
+              
             </Card>
           </div>
         </div>
       </section>
 
       {/* Process Steps Section */}
-      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
+      <section className="pt-8 md:py-20 bg-muted/30 font-kufam">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-bold text-xl md:text-4xl mb-12  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
+            <h2 className="font-bold text-xl md:text-4xl  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
               خطواتك نحو المستقبل "ابدأ رحلتك معنا نحو النجاح"
             </h2>
           </div>
@@ -318,11 +335,12 @@ const CareerService = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
+      <section className="py-0 md:py-20 bg-muted/30 font-kufam">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-bold text-xl md:text-4xl mb-12  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
-              ملفك الشخصي  : كل المزايا إلي تستحقها ، إكتشف كل المزايا التي يحتويها ملفك 
+            <h2 className="font-bold text-xl md:text-4xl  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
+              ملفك الشخصي : إكتشف كل المزايا التي
+              يحتويها ملفك
             </h2>
           </div>
 
@@ -333,7 +351,6 @@ const CareerService = () => {
               },
               {
                 image: feature2,
-              
               },
               {
                 image: feature3,
@@ -349,7 +366,11 @@ const CareerService = () => {
                 key={index}
                 className="gradient-card shadow-card border-0 text-center transition-smooth hover:shadow-accent hover:-translate-y-1"
               >
-              <img  className="rounded-lg w-full h-full object-cover" src={feature.image} alt="" />
+                <img
+                  className="rounded-lg w-full h-full object-cover"
+                  src={feature.image}
+                  alt=""
+                />
               </Card>
             ))}
           </div>
@@ -357,13 +378,13 @@ const CareerService = () => {
       </section>
 
       {/* Results Section */}
-      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
+      <section className="py-0 md:py-20 bg-muted/30 font-kufam">
         <div className="container px-6">
           <div className="text-center mb-16">
-            <h2 className="font-bold text-xl md:text-4xl mb-12  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
-              نشاركو معاكم نتائج حقيقية 
+            <h2 className="font-bold text-xl md:text-4xl  bg-gradient-to-r from-blue-500 to-[#C57DE9] inline-block text-transparent bg-clip-text">
+              نشاركو معاكم نتائج حقيقية
             </h2>
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center">
               {[...Array(5)].map((_, i) => (
                 <span key={i} className="text-2xl text-yellow-400">
                   ⭐
@@ -372,49 +393,88 @@ const CareerService = () => {
             </div>
           </div>
 
-              <Swiper
-                spaceBetween={50}
-                slidesPerView={1}
-                pagination={{clickable : true}}
-                autoplay
-                loop              
-              >
-                <SwiperSlide>
-                  <div className="w-[600px]">
-                    <img className="w-full h-full rounded-lg object-cover" src={testimonial1} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                   <div>
-                    <img className="rounded-lg w-full h-full object-cover" src={testimonial2} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                      <div>
-                    <img className="rounded-lg w-full h-full object-cover" src={testimonial3} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div>
-                    <img className="rounded-lg w-full h-full object-cover" src={testimonial4} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                      <div>
-                    <img className="rounded-lg w-full h-full object-cover" src={testimonial5} alt="" />
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={0}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 3000, // 3 seconds
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            className="mySwiper arrows h-full w-full "
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div>
+                <img
+                  className="w-full h-full rounded-lg object-cover"
+                  src={testimonial1}
+                  alt=""
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img
+                  className="rounded-lg w-full h-full object-cover"
+                  src={testimonial2}
+                  alt=""
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img
+                  className="rounded-lg w-full h-full object-cover"
+                  src={testimonial3}
+                  alt=""
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img
+                  className="rounded-lg w-full h-full object-cover"
+                  src={testimonial4}
+                  alt=""
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img
+                  className="rounded-lg w-full h-full object-cover"
+                  src={testimonial5}
+                  alt=""
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-10 md:py-20 bg-muted/30 font-kufam">
+      <section id="contact" className="py-10 md:py-20 bg-muted/30 font-kufam">
         <div className="container mx-auto px-6">
           <Card className="gradient-primary border-0 p-12 text-center text-white shadow-accent max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">
-              إبدأ اليوم بإستشارتك المجانية وأخطو أول خطوة نحو مستقبل مهني عالمي   
+              إبدأ اليوم بإستشارتك المجانية وأخطو أول خطوة نحو مستقبل مهني عالمي
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="text-lg px-8">

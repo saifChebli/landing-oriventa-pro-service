@@ -180,3 +180,41 @@ body {
   flex: 0 0 100%;
   min-width: 0;
 }
+
+.mySwiper{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff !important; /* Color of non-active dots */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #CCCCCC !important ; /* Color of the active dot */
+}
+
+.swiper-button-next {
+  /* background-color: #ffffff !important; */
+  color: #AD41F4;
+}
+.swiper-button-prev {
+  /* background-color: #ffffff !important; */
+  color: #AD41F4;
+}
