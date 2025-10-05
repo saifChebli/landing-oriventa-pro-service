@@ -27,12 +27,17 @@ import testimonial2 from "@/assets/testimontial-2.jpg";
 import testimonial3 from "@/assets/testimontial-3.jpg";
 import testimonial4 from "@/assets/testimontial-4.jpg";
 import testimonial5 from "@/assets/testimontial-5.jpg";
-
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useEffect } from "react";
 const CareerService = () => {
+
+    useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
 
 
 const scrollToSection = (sectionId: string) => {
@@ -46,6 +51,13 @@ const scrollToSection = (sectionId: string) => {
 
   return (
     <div className="min-h-screen">
+          <div className="marquee">
+        <div className="track">
+          <div className="content">
+            &nbsp;نوفرولك خدمة شاملة ، دقيقة ومحترفة مبنية على خبرة فريق مختص فالبحث عن العمل بالخارج يعرف كل أسرار السوق العالمي ينصحك خطوة بخطوة مع تقديم مرافقة شخصية وتوجيهات مهنية
+            </div>
+        </div>
+      </div>
       {/* Hero Section */}
       <section
         className=""
@@ -477,10 +489,12 @@ const scrollToSection = (sectionId: string) => {
               إبدأ اليوم بإستشارتك المجانية وأخطو أول خطوة نحو مستقبل مهني عالمي
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="text-lg px-8">
-                إستشارة مجانية
-                <MessageCircle className="w-5 h-5 ml-2" />
-              </Button>
+                <Link to="/consultation" >
+                  <Button  size="lg" variant="secondary" className="text-lg px-8">
+                      إستشارة مجانية   
+                    <MessageCircle className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
             </div>
           </Card>
         </div>
